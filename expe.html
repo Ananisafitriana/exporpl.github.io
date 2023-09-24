@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>glassmorphism portfolio website design tutorial</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header section starts  -->
+
+    <header>
+      <div class="user">
+        <img src="images/pic.jpg" alt="" />
+        <h3 class="name">Annisa Fitriana</h3>
+        <p class="post">Data Analyst</p>
+      </div>
+
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="boutme.html">about</a></li>
+          <li><a href="service.html">service</a></li>
+          <li><a href="expe.html">Experience</a></li>
+          <li><a href="edu.html">education</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- header section ends -->
+    <div class="container">
+      <!-- contact section  -->
+      <div class="expe">
+        <h1 class="heading">My Experience</h1>
+        <div class="slides">
+          <div class="slide">
+            <img src="images/portfolio-1.jpg" alt="" />
+            <p>Webinar Data Analyst</p>
+          </div>
+          <div class="slide">
+            <img src="images/portfolio-2.jpg" alt="" />
+            <p>Webinar Data Analyst</p>
+          </div>
+          <div class="slide">
+            <img src="images/portfolio-3.jpg" alt="" />
+            <p>Stock Barang dan penjualan</p>
+          </div>
+          <div class="slide">
+            <img src="images/portfolio-4.jpg" alt="" />
+            <p>Input data shiff, jadwal, jabatan</p>
+          </div>
+          <div class="slide">
+            <img src="images/portfolio-5.jpg" alt="" />
+            <p>LCC IT tingkat nasional</p>
+          </div>
+          <div class="slide">
+            <img src="images/portfolio-6.jpg" alt="" />
+            <p>Olimpiade Matematika tingkat Nasional</p>
+          </div>
+          <div class="navigation">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(-1)">&#10095;</a>
+          </div>
+        </div>
+
+        <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides((slideIndex += n));
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (n > slides.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
